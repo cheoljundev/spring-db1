@@ -75,7 +75,7 @@ public class UnCheckedAppTest {
     }
 
     static class RuntimeSQLException extends RuntimeException {
-        public RuntimeSQLException(Throwable cause) {
+        public RuntimeSQLException(Throwable cause) { // e(기존 예외)를 포함하지 않으면 장애 확인이 어렵다.
             super(cause);
         }
     }
